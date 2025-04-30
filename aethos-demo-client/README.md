@@ -1,5 +1,3 @@
-# Firebase Studio
+# Aethos Demo Client
 
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+This is a demo app showing the integration of Aethos platform with 3rd party AI application
