@@ -1,1 +1,1 @@
-# Azure AI Agent Backend
+# Aethos Platform
