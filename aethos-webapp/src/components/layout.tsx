@@ -22,10 +22,10 @@ import {
   Settings,
   User,
   LayoutDashboard,
-  Computer
+  Computer,
 } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import {useRouter, usePathname} from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 
 const navigation = [
@@ -76,7 +76,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     for (let i = 0; i < pathSegments.length; i++) {
       const segment = pathSegments[i];
       const href = "/" + pathSegments.slice(0, i + 1).join("/");
-      let title = segment.replace("-", " ").replace(/(.)/, (match) => match.toUpperCase());
+      let title = segment
+        .replace("-", " ")
+        .replace(/(.)/, (match) => match.toUpperCase());
 
       // Special case for agent details page: show the agent name
       if (i === 1 && pathSegments[0] === "system") {
@@ -94,21 +96,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <SidebarProvider>
       <Sidebar>
         <SidebarHeader>
-          <h2 className="font-semibold text-lg tracking-tight">
-            Aethos Admin Panel
-          </h2>
-          <p className="text-muted-foreground">
-            Manage and monitor Aethos metrics.
-          </p>
+          <h2 className="font-semibold text-lg tracking-tight">Aethos Admin</h2>
+          <p className="text-muted-foreground"></p>
         </SidebarHeader>
         <SidebarContent>
           <ScrollArea className="h-[calc(100vh - 8rem)]">
             <SidebarGroup>
-              <SidebarGroupLabel>Navigation</SidebarGroupLabel>
               <SidebarMenu>
                 {navigation.map((item) => (
                   <SidebarMenuItem key={item.href}>
-                    <SidebarMenuButton href={item.href}>
+                    <SidebarMenuButton
+                      onClick={() => router.push(item.href)} // Navigate programmatically
+                    >
                       <item.icon className="mr-2 h-4 w-4" />
                       <span>{item.title}</span>
                     </SidebarMenuButton>
@@ -126,7 +125,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </SidebarFooter>
       </Sidebar>
       <div className="md:pl-[16rem] flex-1">
-        <div className="container py-10">
+        <div className="container py-10 px-20">
           <div className="mb-8">
             <nav aria-label="Breadcrumb">
               <ol className="flex list-none p-0">

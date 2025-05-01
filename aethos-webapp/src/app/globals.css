@@ -82,8 +82,16 @@ body {
   * {
     @apply border-border;
   }
-  body {
+  /* body {
     @apply bg-background text-foreground;
+  } */
+  body {
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
   }
 }
-

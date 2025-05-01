@@ -1,4 +1,4 @@
-# **App Name**: RAI Chat
+# **App Name**: Aethos Demo
 
 ## Core Features:
 
@@ -15,5 +15,5 @@
 - Subtle animation or transition when displaying the RAI score and ethical AI metrics.
 
 ## Original User Request:
+
 An chatting application where user chat with like that of chatgpt. here user on the response text box, there is one icon on clicking which the AI response is sent to my backend service and that service returns a responsible AI score. Along with this score, my backend service will return some other metrices such as biasness, truthfulness, fairness, groundedness, and other responsible AI /Ethical AI metrices. User can click on the icon to get the ResponsileAI(RAI Score) or can view the already generated RAI score. So this app shows how the AI powered application can integrate with my backend services.
-  
