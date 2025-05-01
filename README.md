@@ -1,6 +1,8 @@
 # aethos
 
+
 What is Aethos?
+
 Aethos is an enterprise-grade platform that evaluates AI-generated content against responsible AI principles using a sophisticated multi-agent architecture. By leveraging specialized "checker agents" orchestrated by intelligent "orchestrator agents," Aethos provides comprehensive assessments across multiple dimensions of AI ethics and safety.
 Key Features
 Multi-Agent Architecture
@@ -23,6 +25,7 @@ React Dashboard: Modern web interface for hands-on evaluation and monitoring
 Integration SDK: JavaScript/TypeScript library for seamless integration into client applications
 REST API: Full-featured API for custom integrations and automated workflows
 
+
 Enterprise-Ready
 
 Built on Azure cloud for security, scalability, and reliability
@@ -38,47 +41,7 @@ Evaluation: Multiple specialized checker agents evaluate the content in parallel
 Aggregation: Evaluation scores are aggregated and normalized
 Results: Comprehensive assessment with detailed scores and explanations is returned
 
-Quick Start
-Installation
-SDK Installation
-bashnpm install @aethos/sdk
-# or
-yarn add @aethos/sdk
-Direct API Usage
-bash# Get your API key from the Aethos dashboard
-curl -X POST "https://api.aethos.ai/v1/evaluate" \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"content": "Your AI-generated content here"}'
-Basic Usage
-javascriptimport { AethosClient } from '@aethos/sdk';
 
-// Initialize the client
-const aethos = new AethosClient({
-  apiKey: 'YOUR_API_KEY'
-});
-
-// Evaluate content
-async function evaluateContent() {
-  const result = await aethos.evaluate({
-    content: "Your AI-generated content here",
-    contentType: "text", // "text", "image", "code", etc.
-    evaluations: ["fairness", "safety", "bias", "toxicity"] // Optional: specify evaluations
-  });
-  
-  console.log("Overall score:", result.overallScore);
-  console.log("Evaluation dimensions:", result.dimensions);
-}
-
-evaluateContent();
-Documentation
-Comprehensive documentation is available at docs.aethos.ai, including:
-
-Getting Started Guide
-API Reference
-SDK Documentation
-Integration Examples
-Deployment Options
 
 Use Cases
 Content Moderation
