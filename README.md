@@ -1,4 +1,4 @@
-# aethos
+# Aethos
 
 ![image](https://github.com/user-attachments/assets/ad98971e-a0fa-4729-842b-0d2640d75719)
 
